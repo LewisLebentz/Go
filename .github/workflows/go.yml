@@ -40,4 +40,4 @@ jobs:
       uses: actions/upload-artifact@v2.2.0
       with:
         name: centralstatus
-        path: .
+        path: bin/centralstatus
