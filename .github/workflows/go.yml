@@ -15,8 +15,8 @@ jobs:
     - name: Build
       run: go build -o bin/centralstatus
       env:
-       GOOS:Android
-       GOARCH:arm64
+       GOOS: Android
+       GOARCH: arm64
 
     - name: PWD
       run: cd bin && pwd && ls
