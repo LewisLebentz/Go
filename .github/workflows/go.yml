@@ -15,7 +15,7 @@ jobs:
     - name: Build
       run: go build -o bin/centralstatus
       env:
-       GOOS: android
+       GOOS: linux
        GOARCH: arm64
 
 
