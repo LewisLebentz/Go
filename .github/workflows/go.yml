@@ -1,32 +1,19 @@
 name: Go
-
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
 jobs:
-
   build:
     name: Build
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
-
     - name: Set up Go 1.x
       uses: actions/setup-go@v2
-      with:
-        go-version: ^1.13
-      id: go
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
     - name: Build
       run: go build -o bin/centralstatus
-
-    - name: Test
-      run: go test -v .
 
     - name: PWD
       run: cd bin && pwd && ls
@@ -37,5 +24,4 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.0
       with:
-        name: centralstatus
         path: bin/centralstatus
