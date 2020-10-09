@@ -17,7 +17,6 @@ jobs:
       env:
        GOOS: android
        GOARCH: arm64
-       CGO_ENABLED: 1
 
 
     - name: PWD
