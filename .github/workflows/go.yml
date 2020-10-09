@@ -15,7 +15,7 @@ jobs:
     - name: Build
       run: go build -o bin/centralstatus
       env:
-       GOOS: Android
+       GOOS: android
        GOARCH: arm64
 
     - name: PWD
