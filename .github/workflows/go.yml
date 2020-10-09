@@ -23,7 +23,7 @@ jobs:
       run: cd bin && pwd && ls
 
     - name: test run
-      run: ./bin/centralstatus
+      run:# ./bin/centralstatus
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.0
