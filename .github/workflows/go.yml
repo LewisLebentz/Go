@@ -36,6 +36,9 @@ jobs:
     - name: Test
       run: go test -v .
 
+    - name: PWD
+      run: pwd && ls
+
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.0
       with:
